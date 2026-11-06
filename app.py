@@ -3,6 +3,16 @@ import io
 import os
 import re
 from datetime import datetime
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return "Komati App is running!"
+
+if __name__ == "__main__":
+    app.run()
 
 import pandas as pd
 import plotly.express as px
